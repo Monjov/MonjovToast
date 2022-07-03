@@ -1,17 +1,21 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="showToast">Show toast</button>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts" setup>
+import { POSITION, TYPE, useToast } from "../src"
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const toast = useToast()
+const getRandom = <T>(list: T[]) => list[Math.floor((Math.random() * 10) % list.length)]
+const randomType = () => getRandom(Object.values(TYPE))
+
+const randomPosition = () => getRandom(Object.values(POSITION))
+
+const randomMessage = () => getRandom(["Hello", "I'm a toast!" ])
+
+const showToast = () => toast(randomMessage(), { type: randomType(), position: randomPosition() })
+
 </script>
 
 <style>
