@@ -7,12 +7,10 @@ import type { ToastContent, ToastOptions, ToastOptionsAndContent} from "../types
 import type { ToastContainerOptions } from "../types/toastContainer"
 import { hasProp, isFunction } from "./utils"
 
-// import { hasProp, isFunction } from "./utils"
+
 
 type EventData = {
-  [EVENTS.ADD]: ToastOptionsAndContent & {
-    id: ToastID
-  }
+  [EVENTS.ADD]: ToastOptionsAndContent & { id: ToastID }
   [EVENTS.CLEAR]: undefined
   [EVENTS.DISMISS]: ToastID
   [EVENTS.UPDATE]:

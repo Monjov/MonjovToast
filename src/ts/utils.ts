@@ -163,9 +163,7 @@ export const asContainerProps = (options: BasePluginOptions): ToastContainerOpti
 
     const keys = Object.keys(containerProps) as (keyof ToastContainerOptions)[]
 
-    keys.forEach(key =>  
-        typeof containerProps[key] === "undefined" && delete containerProps[key]
-    )
+    keys.forEach(key => typeof containerProps[key] === "undefined" && delete containerProps[key])
 
 
     return containerProps

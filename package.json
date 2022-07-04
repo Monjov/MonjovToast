@@ -5,13 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "jest",
+    "test": "yarn test:unit",
+    "test:watch": "yarn test --watch",
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "jest": "^28.1.2",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
+    "ts-jest": "^28.0.5",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0"
   },
@@ -27,5 +31,23 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "typescript": "~4.5.5"
+  },
+
+  "peerDependencies": {
+    "vue": "^3.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Monjov/VueToast/issues"
+  },
+  "homepage": "https://github.com/Maronato/VueToast#readme",
+  "keywords": [
+    "vue",
+    "notification",
+    "toast"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monjov/VueToast/"
   }
 }

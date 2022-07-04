@@ -27,4 +27,4 @@ export enum EVENTS {
   
 
 
-export const VA_NAMESPACE = "Vue-Toastification"
+export const VA_NAMESPACE = "VueToast"
